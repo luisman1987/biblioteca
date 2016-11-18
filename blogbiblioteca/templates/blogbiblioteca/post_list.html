@@ -1,0 +1,16 @@
+{% extends 'blogbiblioteca/base.html' %}}
+      {% block content %}
+
+            {% for post in posts %}
+         <div class="post">
+
+                 <p>{{ post.titulo }}</a></p>
+            <h1><a href="{% url 'blogbiblioteca.views.post_detail' pk=post.pk %}">{{ post.ISBN }}</a></h1>
+            <p>{{ post.autor }}</a></p>
+            <p>{{ post.editorial }}</a></p>
+            <p>{{ post.pais }}</a></p>
+             <p>{{ post.ano|linebreaksbr }}</p>
+         </div>
+     {% endfor %}
+
+      {% endblock content %}

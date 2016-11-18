@@ -1,0 +1,23 @@
+{% extends 'blogbiblioteca/base.html' %}
+
+ {% block content %}
+<div class="content container">
+<div class="row">
+ <div class="col-md-8">
+     {% for post in posts %}
+         <div class="post">
+
+                 <p>{{ post.nombre }}</a></p>
+            <h1><a href="">{{ post.ISBN }}</a></h1>
+            <p>{{ post.titulo }}</a></p>
+            <p>{{ post.autor }}</a></p>
+            <p>{{ post.editorial }}</a></p>
+            <p>{{ post.pais }}</a></p>
+             <p>{{ post.ano|linebreaksbr }}</p>
+         </div>
+     {% endfor %}
+ </div>
+</div>
+</div>
+
+{% endblock content %}
